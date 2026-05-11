@@ -24,7 +24,13 @@ const Education = () => {
   ];
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#0f172a] via-[#111827] to-[#1e293b] text-white px-4 sm:px-6 md:px-10 lg:px-16 py-14 sm:py-16">
+    <div className="
+  relative min-h-screen overflow-hidden
+  bg-white text-black
+  dark: bg-gradient-to-br dark:from-[#0f172a] dark:via-[#111827] dark:to-[#1e293b]
+  dark:text-white
+  px-4 sm:px-6 md:px-10 lg:px-16 py-14 sm:py-16
+">
 
       {/* Background Glow */}
       <div className="absolute top-10 left-0 sm:left-10 w-40 h-40 sm:w-72 sm:h-72 bg-pink-500/10 rounded-full blur-3xl"></div>
@@ -45,7 +51,7 @@ const Education = () => {
         </motion.h2>
 
         {/* Subtitle */}
-        <p className="text-center text-gray-400 max-w-3xl mx-auto mb-12 sm:mb-20 leading-7">
+        <p className="text-center text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12 sm:mb-20 leading-7">
           Academic background focused on computer applications, software
           engineering, and modern web development technologies.
         </p>
@@ -74,25 +80,27 @@ const Education = () => {
                 scale: 1.01,
               }}
               className="
-                group
-                relative
-                bg-[#111827]
-                w-full
-                min-h-[280px]
-                rounded-3xl
-                pt-14
-                pb-6 sm:pb-8
-                px-5 sm:px-8
-                border
-                border-white/5
-                border-l-4
-                border-l-pink-500
-                shadow-2xl
-                overflow-hidden
-                hover:border-pink-500/30
-                transition-all
-                duration-500
-              "
+group
+relative
+bg-gray-100
+dark:bg-[#111827]
+w-full
+min-h-[280px]
+rounded-3xl
+pt-14
+pb-6 sm:pb-8
+px-5 sm:px-8
+border
+border-gray-300
+dark:border-white/5
+border-l-4
+border-l-pink-500
+shadow-2xl
+overflow-hidden
+hover:border-pink-500/30
+transition-all
+duration-500
+"
             >
 
               {/* Hover Glow */}
@@ -115,7 +123,7 @@ const Education = () => {
                   justify-center
                   shadow-2xl
                   ring-4
-                  ring-[#111827]
+                  ring-white dark:ring-[#111827]
                   z-20
                 "
               >
@@ -137,12 +145,12 @@ const Education = () => {
               <div className="relative z-10">
 
                 {/* Degree */}
-                <h3 className="text-xl sm:text-2xl font-bold text-white leading-snug">
+                <h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white leading-snug">
                   {edu.degree}
                 </h3>
 
                 {/* College */}
-                <p className="text-sm sm:text-base text-gray-300 mt-4 leading-7">
+                <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mt-4 leading-7">
                   {edu.college}
                 </p>
 

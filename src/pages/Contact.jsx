@@ -58,7 +58,14 @@ const Contact = () => {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-[#0f172a] to-[#1e293b] text-white px-4 sm:px-6 md:px-16 py-16 relative overflow-hidden">
+    <div className="
+  min-h-screen
+  bg-white text-black
+  dark:bg-gradient-to-r dark:from-[#0f172a] dark:to-[#1e293b]
+  dark:text-white
+  px-4 sm:px-6 md:px-16 py-16
+  relative overflow-hidden
+">
 
     <div className="absolute top-20 left-20 w-72 h-72 bg-pink-500/20 rounded-full blur-3xl"></div>
       {/* 🔥 Heading */}
@@ -70,19 +77,25 @@ const Contact = () => {
         Let's Connect
       </motion.h2>
 
-      <p className="text-center text-gray-400 mb-16 text-lg md:text-xl">
+      <p className="text-center text-gray-600 dark:text-gray-400 mb-16 text-lg md:text-xl">
         Have a project in mind or want to collaborate?
       </p>
 
 
        {/* <section className="bg-[#0f0f0f] text-white min-h-screen flex items-center px-6 md:px-16"> */}
 
-      <div className="grid md:grid-cols-2 gap-16 w-full max-w-6xl mx-auto bg-white/5
-                      backdrop-blur-xl
-                      border border-white/10
-                      rounded-3xl
-                      shadow-2xl
-                      p-8 md:p-14">
+      <div className="
+grid md:grid-cols-2 gap-16
+w-full max-w-6xl mx-auto
+bg-gray-100
+dark:bg-white/5
+backdrop-blur-xl
+border border-gray-300
+dark:border-white/10
+rounded-3xl
+shadow-2xl
+p-8 md:p-14
+">
 
         {/* LEFT SIDE */}
         <motion.div
@@ -92,11 +105,11 @@ const Contact = () => {
         >
           {/* <p className="text-gray-400 mb-2">CONTACT</p> */}
 
-          <h1 className="text-5xl font-bold leading-tight mb-6">
+          <h1 className="text-5xl font-bold leading-tight mb-6 text-black dark:text-white">
             Get in Touch
           </h1>
 
-          <p className="text-gray-400 max-w-md mb-8">
+          <p className="text-gray-600 dark:text-gray-400 max-w-md mb-8">
             Feel free to reach out for collaboration, freelance work, or any opportunities.
             I'm always open to discussing new opportunities.
           </p>
@@ -109,16 +122,16 @@ const Contact = () => {
             href="https://github.com/Sami2703"
             target="_blank"
             rel="noreferrer"
-            className="flex items-start gap-4 p-4 border border-gray-800 rounded-xl hover:border-white transition duration-300"
+            className="flex items-start gap-4 p-4 border border-gray-300 dark:border-gray-800 rounded-xl hover:border-white transition duration-300"
           >
             <FaGithub className="text-3xl mt-1 text-white" />
 
             <div>
-              <h3 className="text-xl font-semibold text-white">
+              <h3 className="text-xl font-semibold text-black dark:text-white">
                 GitHub
               </h3>
 
-              <p className="text-gray-400 mt-2">
+              <p className="text-gray-600 dark:text-gray-400 mt-2">
                 Explore my projects, repositories, and development work.
               </p>
             </div>
@@ -129,16 +142,16 @@ const Contact = () => {
             href="https://www.linkedin.com/in/samiksha-sapat-6ab056208"
             target="_blank"
             rel="noreferrer"
-            className="flex items-start gap-4 p-4 border border-gray-800 rounded-xl hover:border-blue-500 transition duration-300"
+            className="flex items-start gap-4 p-4 border border-gray-300 dark:border-gray-800 rounded-xl hover:border-blue-500 transition duration-300"
           >
             <FaLinkedin className="text-3xl mt-1 text-blue-400" />
 
             <div>
-              <h3 className="text-xl font-semibold text-white">
+              <h3 className="text-xl font-semibold text-black dark:text-white">
                 LinkedIn
               </h3>
 
-              <p className="text-gray-400 mt-2">
+              <p className="text-gray-600 dark:text-gray-400 mt-2">
                 Connect professionally and discuss opportunities.
               </p>
             </div>
@@ -147,16 +160,16 @@ const Contact = () => {
           {/* Email */}
           <a
             href="mailto:samikshasapat03@gmail.com"
-            className="flex items-start gap-4 p-4 border border-gray-800 rounded-xl hover:border-pink-500 transition duration-300"
+            className="flex items-start gap-4 p-4 border border-gray-300 dark:border-gray-800 rounded-xl hover:border-pink-500 transition duration-300"
           >
             <FaEnvelope className="text-3xl mt-1 text-pink-400" />
 
             <div>
-              <h3 className="text-xl font-semibold text-white">
+              <h3 className="text-xl font-semibold text-black dark:text-white">
                 Email
               </h3>
 
-              <p className="text-gray-400 mt-2">
+              <p className="text-gray-600 dark:text-gray-400 mt-2">
                 Send me an email regarding projects, freelance work, or hiring.
               </p>
             </div>
@@ -167,16 +180,16 @@ const Contact = () => {
             href="https://wa.me/918329886470"
             target="_blank"
             rel="noreferrer"
-            className="flex items-start gap-4 p-4 border border-gray-800 rounded-xl hover:border-green-500 transition duration-300"
+            className="flex items-start gap-4 p-4 border border-gray-300 dark:border-gray-800 rounded-xl hover:border-green-500 transition duration-300"
           >
             <FaWhatsapp className="text-3xl mt-1 text-green-400" />
 
             <div>
-              <h3 className="text-xl font-semibold text-white">
+              <h3 className="text-xl font-semibold text-black dark:text-white">
                 WhatsApp
               </h3>
 
-              <p className="text-gray-400 mt-2">
+              <p className="text-gray-600 dark:text-gray-400 mt-2">
                 Directly message me for quick communication.
               </p>
             </div>
@@ -188,12 +201,16 @@ const Contact = () => {
         {/* RIGHT SIDE FORM */}
         <motion.form
           onSubmit={handleSubmit}
-          className="space-y-8
-                     bg-white/5
-                     backdrop-blur-md
-                     border border-white/10
-                     rounded-2xl
-                     p-8"
+          className="
+space-y-8
+bg-gray-100
+dark:bg-white/5
+backdrop-blur-md
+border border-gray-300
+dark:border-white/10
+rounded-2xl
+p-8
+"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -206,10 +223,11 @@ const Contact = () => {
             placeholder="Your Name"
             className="w-full
                       bg-transparent
-                      border-b border-gray-600
+                      border-b
                       py-4
-                      text-white
-                      placeholder:text-gray-500
+                      text-black dark:text-white
+placeholder:text-gray-500 dark:placeholder:text-gray-500
+border-gray-400 dark:border-gray-60
                       outline-none
                       focus:border-pink-400
                       transition-all duration-300"
@@ -223,10 +241,11 @@ const Contact = () => {
             placeholder="Your Email"
             className="w-full
                       bg-transparent
-                      border-b border-gray-600
+                      border-b
                       py-4
-                      text-white
-                      placeholder:text-gray-500
+                      text-black dark:text-white
+placeholder:text-gray-500 dark:placeholder:text-gray-500
+border-gray-400 dark:border-gray-60
                       outline-none
                       focus:border-pink-400
                       transition-all duration-300"
@@ -240,10 +259,11 @@ const Contact = () => {
             placeholder="Subject"
             className="w-full
                       bg-transparent
-                      border-b border-gray-600
+                      border-b
                       py-4
-                      text-white
-                      placeholder:text-gray-500
+                      text-black dark:text-white
+placeholder:text-gray-500 dark:placeholder:text-gray-500
+border-gray-400 dark:border-gray-60
                       outline-none
                       focus:border-pink-400
                       transition-all duration-300"
@@ -257,10 +277,11 @@ const Contact = () => {
             placeholder="Message"
             className="w-full
                       bg-transparent
-                      border-b border-gray-600
+                      border-b
                       py-4
-                      text-white
-                      placeholder:text-gray-500
+                      text-black dark:text-white
+placeholder:text-gray-500 dark:placeholder:text-gray-500
+border-gray-400 dark:border-gray-60
                       outline-none
                       focus:border-pink-400
                       transition-all duration-300"

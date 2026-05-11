@@ -143,7 +143,13 @@ const Projects = () => {
   ];
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#0f172a] via-[#111827] to-[#1e293b] text-white px-4 sm:px-6 md:px-10 lg:px-16 py-14 sm:py-20">
+    <div className="
+  relative min-h-screen overflow-hidden
+  bg-white text-black
+  dark:bg-gradient-to-br dark:from-[#0f172a] dark:via-[#111827] dark:to-[#1e293b]
+  dark:text-white
+  px-4 sm:px-6 md:px-10 lg:px-16 py-14 sm:py-20
+">
 
       {/* Background Glow */}
 <div className="absolute top-10 left-0 sm:left-10 w-40 h-40 sm:w-96 sm:h-96 bg-pink-500/20 rounded-full blur-3xl"></div>
@@ -164,7 +170,7 @@ const Projects = () => {
         Projects
       </motion.h2>
 
-      <p className="text-center text-gray-400 max-w-2xl mx-auto mb-16 leading-7">
+      <p className="text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-16 leading-7">
         A collection of scalable, responsive, and performance-focused applications
         built using modern frontend and full-stack technologies.
       </p>
@@ -193,7 +199,16 @@ const Projects = () => {
 
               {/* 🔹 FRONT */}
               <div
-                className="absolute inset-0 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-xl flex flex-col"
+                className="
+absolute inset-0
+bg-gray-100
+dark:bg-white/10
+backdrop-blur-md
+p-6 rounded-2xl
+border border-gray-300
+dark:border-white/20
+shadow-xl flex flex-col
+"
                 style={{
                   backfaceVisibility: "hidden",
                 }}
@@ -207,8 +222,15 @@ const Projects = () => {
                   {project.frontTech.map((tech, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center gap-1 text-sm bg-black/40 border border-white/10 px-3 py-2 rounded-full hover:bg-white/20
-transition"
+                      className="
+flex items-center gap-1 text-sm
+bg-gray-200 text-black
+dark:bg-black/40 dark:text-white
+border border-gray-300 dark:border-white/10
+px-3 py-2 rounded-full
+hover:bg-gray-300 dark:hover:bg-white/20
+transition
+"
                     >
                       {tech.icon}
                       <span>{tech.name}</span>
@@ -225,7 +247,13 @@ transition"
                       e.stopPropagation();
                       window.open(project.url, "_blank");
                     }}
-                    className="px-4 py-2 border  bg-pink-500 rounded-full hover:bg-pink-600 hover:text-black transition-all duration-300"
+                    className="
+px-4 py-2 border
+bg-pink-500 text-white
+rounded-full
+hover:bg-pink-600
+transition-all duration-300
+"
                   >
                     Open
                   </button>
@@ -236,7 +264,16 @@ transition"
                       e.stopPropagation();
                       setFlippedIndex(i);
                     }}
-                    className="px-4 py-2 border border-white rounded-full hover:bg-white hover:text-black transition"
+                    className="
+px-4 py-2
+border border-gray-400
+dark:border-white
+rounded-full
+hover:bg-gray-200
+dark:hover:bg-white
+hover:text-black
+transition
+"
                   >
                     Details
                   </button>
@@ -246,7 +283,13 @@ transition"
 
               {/* 🔹 BACK */}
               <div
-                className="absolute inset-0 bg-pink-500/90 p-6 rounded-2xl shadow-xl flex flex-col justify-center"
+                className="
+absolute inset-0
+bg-pink-500/90
+text-white
+p-6 rounded-2xl shadow-xl
+flex flex-col justify-center
+"
                 style={{
                   transform: "rotateY(180deg)",
                   backfaceVisibility: "hidden",

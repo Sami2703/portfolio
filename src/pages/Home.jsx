@@ -55,7 +55,7 @@ const positions = useMemo(() => {
     <>
       <section
       id="home"
-      className="relative h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-[#0f172a] via-[#111827] to-[#1e293b] text-white text-center px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-16">
+      className="relative h-screen flex flex-col items-center justify-center overflow-hidden bg-white dark:bg-gradient-to-br dark:from-[#0f172a] dark:via-[#111827] dark:to-[#1e293b] text-black dark:text-white text-center px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-16">
 
       <div className="absolute top-0 left-0 w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] bg-pink-500/20 rounded-full blur-3xl"></div>
 
@@ -147,7 +147,7 @@ font-medium "
             className="text-lg sm:text-2xl md:text-3xl font-semibold text-pink-400"
           />
 
-          <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl mt-4 leading-7 px-2">
+          <p className="text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-300 max-w-2xl mt-4 leading-7 px-2">
             Frontend / UI Developer with 3+ years of experience in React.js and JavaScript (ES6+), along with hands-on exposure to the MERN stack
           </p>
 
@@ -187,7 +187,7 @@ transition-all duration-300
 flex items-center justify-center gap-2
 w-1/2 sm:w-auto
 border border-white/20
-bg-white/5
+bg-gray-200 dark:bg-white/5
 backdrop-blur-md
 px-6 py-3
 rounded-full
@@ -211,7 +211,7 @@ transition-all duration-300
 flex items-center justify-center gap-2
 w-1/2 sm:w-auto
 border border-white/20
-bg-white/5
+bg-gray-200 dark:bg-white/5
 backdrop-blur-md
 px-6 py-3
 rounded-full

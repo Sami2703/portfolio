@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Sun, Moon } from "lucide-react";
+import { useTheme } from "../context/ThemeContext";
 
 const Navbar = () => {
+  const { theme, toggleTheme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -42,11 +45,11 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-black/70 backdrop-blur-md shadow-lg py-3"
+          ? "bg-white/70 dark:bg-black/70 backdrop-blur-md shadow-lg py-3"
           : "bg-transparent py-5"
       }`}
     >
-      <div className="flex justify-between items-center px-6 md:px-8 text-white">
+      <div className="flex justify-between items-center px-6 md:px-8 text-black dark:text-white">
 
         {/* Logo */}
         <h1 className="font-bold text-xl text-pink-400">
@@ -66,18 +69,44 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="block md:hidden"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+
+
+        {/* Right Side */}
+<div className="flex items-center gap-4">
+
+  {/* Theme Toggle Button */}
+  <button
+    onClick={toggleTheme}
+    className="p-2 rounded-full border border-gray-300
+dark:border-white/20
+bg-white/80
+dark:bg-transparent
+text-black
+dark:text-white
+hover:bg-gray-200
+dark:hover:bg-white/10 transition duration-300"
+  >
+    {theme === "dark" ? (
+      <Sun size={20} />
+    ) : (
+      <Moon size={20} />
+    )}
+  </button>
+
+  {/* Mobile Menu Button */}
+  <button
+    className="block md:hidden"
+    onClick={() => setMenuOpen(!menuOpen)}
+  >
+    {menuOpen ? <X size={28} /> : <Menu size={28} />}
+  </button>
+
+</div>
       </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden flex flex-col gap-4 px-6 pt-4 pb-6 bg-black/90 text-white">
+        <div className="md:hidden flex flex-col gap-4 px-6 pt-4 pb-6 bg-white dark:bg-black/90 text-black dark:text-white">
           {navItems.map((item, index) => (
             <button
               key={index}

@@ -7,7 +7,7 @@ import App from "./App";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import ScrollToTop from "./components/ScrollToTop";
-
+import { ThemeProvider } from "./context/ThemeContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -15,7 +15,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Provider store={store}>
       <BrowserRouter>
         <ScrollToTop />
+        <ThemeProvider>
         <App />
+        </ThemeProvider>
       </BrowserRouter>
     </Provider>
   </React.StrictMode>

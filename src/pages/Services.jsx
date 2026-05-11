@@ -96,7 +96,19 @@ const Services = () => {
   ];
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#0f172a] via-[#111827] to-[#1e293b] text-white px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-14 sm:py-16 md:py-20">
+    <div
+  className="
+  relative min-h-screen overflow-hidden
+  bg-white text-black
+  dark:bg-gradient-to-br
+  dark:from-[#0f172a]
+  dark:via-[#111827]
+  dark:to-[#1e293b]
+  dark:text-white
+  px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24
+  py-14 sm:py-16 md:py-20
+"
+>
 
       <div className="absolute top-10 left-0 sm:left-10 w-[220px] h-[220px] sm:w-[350px] sm:h-[350px] md:w-[500px] md:h-[500px] bg-pink-500/20 rounded-full blur-3xl"></div>
 
@@ -107,12 +119,23 @@ const Services = () => {
       <motion.h2
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-pink-400 mb-8 sm:mb-12"
+        className="
+text-3xl sm:text-4xl md:text-5xl
+font-bold text-center
+text-pink-500 dark:text-pink-400
+mb-8 sm:mb-12
+"
       >
         My Services
       </motion.h2>
 
-      <p className="text-sm sm:text-base text-center text-gray-400 max-w-2xl mx-auto mb-12 sm:mb-16 leading-7 px-2">
+      <p className="
+text-sm sm:text-base text-center
+text-gray-700 dark:text-gray-400
+max-w-2xl mx-auto
+mb-12 sm:mb-16
+leading-7 px-2
+">
         Building scalable, responsive, and high-performance web applications
         with modern frontend technologies and user-focused experiences.
       </p>
@@ -137,9 +160,13 @@ const Services = () => {
   h-full
   min-h-[360px]
   sm:min-h-[400px]
-  bg-white/5
+ bg-gray-100
+  dark:bg-white/5
+
   backdrop-blur-xl
-  border border-white/10
+
+  border border-gray-300
+  dark:border-white/10
   rounded-2xl sm:rounded-3xl
 p-5 sm:p-6 lg:p-8
   shadow-2xl
@@ -148,7 +175,8 @@ p-5 sm:p-6 lg:p-8
   hover:-translate-y-3
   md:hover:-translate-y-3
   hover:border-pink-500/40
-  hover:bg-white/10"
+  hover:bg-pink-100
+dark:hover:bg-white/10"
           >
 
             {/* Glow */}
@@ -171,12 +199,22 @@ p-5 sm:p-6 lg:p-8
             </div>
 
             {/* Title */}
-            <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-white">
+            <h3 className="
+text-xl sm:text-2xl
+font-semibold
+mb-3 sm:mb-4
+text-gray-900 dark:text-white
+">
               {service.title}
             </h3>
 
             {/* Description */}
-            <ul className="text-sm sm:text-[15px] leading-6 sm:leading-7 text-gray-300 space-y-2">
+            <ul className="
+text-sm sm:text-[15px]
+leading-6 sm:leading-7
+text-gray-700 dark:text-gray-300
+space-y-2
+">
               {service.desc.map((point, idx) => (
                 <li key={idx}>• {point}</li>
               ))}

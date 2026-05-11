@@ -23,7 +23,7 @@ const Skills = () => {
     { name: "Vue", icon: <SiVuedotjs className="text-green-400" /> },
     { name: "Redux", icon: <SiRedux className="text-purple-500" /> },
     { name: "Reactquery", icon: <SiReactquery className="text-red-500" /> },
-    { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
+    { name: "Next.js", icon: <SiNextdotjs className="text-black dark:text-white" /> },
     { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
     { name: "CSS3", icon: <FaCss3Alt className="text-blue-400" /> },
     { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
@@ -37,14 +37,14 @@ const Skills = () => {
     { name: "Babel", icon: <SiBabel className="text-yellow-300" /> },
     { name: "NPM", icon: <SiNpm className="text-white-300" /> },
     { name: "Git", icon: <FaGitAlt className="text-red-500" /> },
-    { name: "Vercel", icon: <SiVercel className="text-white-500" /> },
+    { name: "Vercel", icon: <SiVercel className="text-black dark:text-white" /> },
     { name: "Nodejs", icon: <FaNodeJs className="text-green-300" /> },
-    { name: "Expressjs", icon: <SiExpress className="text-black-300" /> },
+    { name: "Expressjs", icon: <SiExpress className="text-black dark:text-white" /> },
     { name: "MongoDB", icon: <SiMongodb className="text-green-400" /> },
     { name: "MySQL", icon: <SiMysql className="text-white-300 bg-blue-400" /> },
     { name: "Python", icon: <FaPython className="text-blue-300" /> },
-    { name: "Django", icon: <SiDjango className="text-white-300" /> },
-    { name: "AWS", icon: <FaAws className="text-white-800" /> },
+    { name: "Django", icon: <SiDjango className="text-black dark:text-white" /> },
+    { name: "AWS", icon: <FaAws className="text-black dark:text-white" /> },
     { name: "Jira", icon: <SiJira className="text-blue-800" /> },
 
   ];
@@ -61,13 +61,20 @@ const Skills = () => {
         ))}
       </div> */}
 
-    <div className="min-h-screen bg-[#0f172a] text-white px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-12 sm:py-16">
+    <div className="
+min-h-screen
+bg-gray-100
+dark:bg-[#0f172a]
+text-black
+dark:text-white
+px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-12 sm:py-16
+">
 
       {/* 🔥 HEADING */}
       <motion.h2
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-pink-400 mb-8 sm:mb-12"
+        className="text-3xl sm:text-4xl md:text-5xl font-bold text-center bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent mb-8 sm:mb-12"
       >
         My Skills
       </motion.h2>
@@ -104,10 +111,24 @@ const Skills = () => {
               scale: 1.15,
               rotate: 3,
             }}
-            className="flex flex-col items-center justify-center p-6 bg-[#1e293b] rounded-xl shadow-lg cursor-pointer hover:bg-pink-500/20 transition"
+
+            className="
+flex flex-col items-center justify-center
+p-6
+bg-white
+dark:bg-[#1e293b]
+border border-gray-300
+dark:border-white/10
+rounded-xl
+shadow-lg
+cursor-pointer
+hover:bg-pink-100
+dark:hover:bg-pink-500/20
+transition
+"
           >
             <div className="text-4xl sm:text-5xl md:text-6xl mb-2 sm:mb-3">{skill.icon}</div>
-            <p className="text-xs sm:text-sm md:text-base text-center">{skill.name}</p>
+            <p className="text-xs sm:text-sm md:text-base text-center text-gray-800 dark:text-white">{skill.name}</p>
           </motion.div>
         ))}
       </div>

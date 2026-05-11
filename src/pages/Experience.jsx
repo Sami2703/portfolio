@@ -50,7 +50,20 @@ const Experience = () => {
   ];
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#0f172a] via-[#111827] to-[#1e293b] text-white px-6 md:px-16 py-20">
+    <div className="
+  relative min-h-screen overflow-hidden
+
+  bg-white text-black
+
+  dark:bg-gradient-to-br
+  dark:from-[#0f172a]
+  dark:via-[#111827]
+  dark:to-[#1e293b]
+
+  dark:text-white
+
+  px-6 md:px-16 py-20
+">
 
       {/* Background Glow */}
       <div className="absolute top-20 left-10 w-100 h-150 bg-pink-500/10 rounded-full blur-3xl"></div>
@@ -71,14 +84,25 @@ const Experience = () => {
         </motion.h2>
 
         {/* Subtitle */}
-        <p className="text-center text-gray-400 max-w-3xl mx-auto mb-20 leading-7">
+        <p className="
+text-center
+text-gray-700 dark:text-gray-400
+max-w-3xl mx-auto
+mb-20 leading-7
+">
           My professional journey focused on building scalable frontend
           applications, optimizing performance, and delivering modern user
           experiences using React.js and full-stack technologies.
         </p>
 
         {/* Timeline */}
-        <div className="relative border-l border-pink-500/20 pl-8 md:pl-12 space-y-14">
+        <div className="
+relative
+border-l border-pink-500/30
+dark:border-pink-500/20
+pl-8 md:pl-12
+space-y-14
+">
 
           {experiences.map((exp, i) => (
             <motion.div
@@ -115,7 +139,7 @@ const Experience = () => {
     justify-center
     shadow-2xl
     ring-4
-    ring-[#111827]
+    ring-white dark:ring-[#111827]
     z-20">
                 {/* <FaBriefcase className="text-white text-xl" /> */}
                 {exp.icon}
@@ -131,11 +155,15 @@ const Experience = () => {
                 className="
                   group
                   relative
-                  bg-[#111827]
-                  rounded-3xl
-                  pt-14 pb-8 px-8
-                  border
-                  border-white/5
+                  bg-gray-100
+  dark:bg-[#111827]
+
+  rounded-3xl
+  pt-14 pb-8 px-8
+
+  border
+  border-gray-300
+  dark:border-white/5
                   border-l-4
                   border-l-pink-500
                   shadow-2xl
@@ -153,18 +181,33 @@ const Experience = () => {
                 <div className="relative z-10">
 
                   {/* Role */}
-                  <h3 className="text-2xl font-bold text-white">
+                  <h3 className="
+text-2xl font-bold
+text-gray-900 dark:text-white
+">
                     {exp.role}
                   </h3>
 
                   {/* Company + Duration */}
                   <div className="flex flex-wrap items-center gap-3 mt-4">
 
-                    <span className="px-4 py-1.5 text-sm rounded-full bg-pink-500/10 text-pink-400 border border-pink-500/20">
+                    <span className="
+px-4 py-1.5 text-sm rounded-full
+
+bg-pink-100 dark:bg-pink-500/10
+
+text-pink-600 dark:text-pink-400
+
+border border-pink-300
+dark:border-pink-500/20
+">
                       {exp.company}
                     </span>
 
-                    <span className="text-sm text-gray-400">
+                    <span className="
+text-sm
+text-gray-600 dark:text-gray-400
+">
                       {exp.duration}
                     </span>
 
@@ -176,7 +219,11 @@ const Experience = () => {
                     {exp.points.map((point, idx) => (
                       <li
                         key={idx}
-                        className="flex gap-3 text-gray-300 leading-7"
+                        className="
+flex gap-3
+text-gray-700 dark:text-gray-300
+leading-7
+"
                       >
                         <span className="text-pink-400 mt-1">
                           ▹
